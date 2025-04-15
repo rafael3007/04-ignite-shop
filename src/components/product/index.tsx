@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Product({ product }: ProductProps) {
   return (
-    <Link href={`/product/${product.id}`}>
+    <Link href={`/product/${product.id}`} prefetch={false} passHref legacyBehavior>
       <ProductContainer className="keen-slider__slide">
         <Image src={product.imageUrl} width={520} height={480} alt="produto" />
         <footer>
