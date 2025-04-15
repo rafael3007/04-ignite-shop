@@ -1,5 +1,6 @@
 import { GetStaticProps } from "next";
 import { useKeenSlider } from "keen-slider/react";
+import Head from "next/head";
 import Stripe from "stripe";
 
 import { stripe } from "../lib/stripe";
@@ -8,7 +9,6 @@ import Product from "../components/product";
 import { HomeContainer } from "../styles/pages/home";
 
 import { HomeProps } from "../types/home";
-import Head from "next/head";
 
 export default function Home({ products }: HomeProps) {
   const [sliderRef] = useKeenSlider<HTMLDivElement>({
